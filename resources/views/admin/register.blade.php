@@ -50,7 +50,7 @@
 								</div>
 								<!-- /Social Login -->
 								
-								<div class="text-center dont-have">Already have an account? <a href="login.html">Login</a></div>
+								<div class="text-center dont-have">Already have an account? <a href="{{route('admin.login')}}">Login</a></div>
 							</div>
                         </div>
                     </div>
