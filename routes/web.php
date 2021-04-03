@@ -40,4 +40,11 @@ Route::get('admin/dashboard', [App\Http\Controllers\AdminController::class, 'sho
  Route::get('admin/post', [App\Http\Controllers\PostController::class, 'index'])->name('post.index');
  Route::get('admin/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category.index');
  Route::post('admin/category', [App\Http\Controllers\CategoryController::class, 'store'])->name('category.store');
+ Route::get('admin/category/status-inactive/{id}', [App\Http\Controllers\CategoryController::class, 'statusUpdateInActive']);
+ Route::get('admin/category/status-active/{id}', [App\Http\Controllers\CategoryController::class, 'statusUpdateActive']);
+ Route::get('admin/category/{id}', [App\Http\Controllers\CategoryController::class, 'destroy']);
+
+
+
+
  //Route::get('admin/product', [App\Http\Controllers\ProductController::class, 'showProduct'])->name('admin.show');

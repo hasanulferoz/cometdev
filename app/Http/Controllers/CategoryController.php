@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 use Stringable;
+use App\Models\Category;
+// use Illuminate\Support\Str;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
@@ -99,6 +100,24 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete_data = Category::find($id);
+        $delete_data->delete();
+        return redirect()->back()->with('success', 'Category deleted successful');
+    }
+
+
+    
+
+    public function statusUpdateActive($id){
+        $status_update = Category::find($id);
+        $status_update->status = true;
+        $status_update->update();
+    }
+
+
+    public function statusUpdateInActive($id){
+        $status_update = Category::find($id);
+        $status_update->status = false;
+        $status_update->update();
     }
 }
