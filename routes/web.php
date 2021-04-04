@@ -43,6 +43,8 @@ Route::get('admin/dashboard', [App\Http\Controllers\AdminController::class, 'sho
  Route::get('admin/category/status-inactive/{id}', [App\Http\Controllers\CategoryController::class, 'statusUpdateInActive']);
  Route::get('admin/category/status-active/{id}', [App\Http\Controllers\CategoryController::class, 'statusUpdateActive']);
  Route::get('admin/category/{id}', [App\Http\Controllers\CategoryController::class, 'destroy']);
+ Route::get('admin/category/{id}/edit', [App\Http\Controllers\CategoryController::class, 'edit'])->name('category.edit');
+ Route::put('admin/category/{id}', [App\Http\Controllers\CategoryController::class, 'update'])->name('category.update');
 
 
 
