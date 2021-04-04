@@ -63,8 +63,8 @@
 														<td>
 
 															<div class="status-toggle">
-																<input type="checkbox" status_id="{{$data->id}}" {{($data->status == true ? 'checked=checked' : '')}} id="cat_status_{{$loop -> index + 1}}" class="check cat_check">
-																<label for="cat_status_{{$loop -> index + 1}}" class="checktoggle">checkbox</label>
+																<input type="checkbox" status_id="{{$data->id}}" {{($data->status == true ? 'checked=checked' : '')}} id="tag_status_{{$loop -> index + 1}}" class="check tag_check">
+																<label for="tag_status_{{$loop -> index + 1}}" class="checktoggle">checkbox</label>
 															</div>															
 
 

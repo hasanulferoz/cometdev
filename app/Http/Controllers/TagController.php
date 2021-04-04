@@ -92,6 +92,22 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete_data = Tag::find($id);
+        $delete_data->delete();
+        return redirect()->back()->with('success', 'Tag deleted successful');
+    }
+
+
+    public function statusUpdateActive($id){
+        $status_update = Tag::find($id);
+        $status_update->status = true;
+        $status_update->update();
+    }
+
+
+    public function statusUpdateInActive($id){
+        $status_update = Tag::find($id);
+        $status_update->status = false;
+        $status_update->update();
     }
 }

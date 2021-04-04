@@ -4,7 +4,7 @@
         $('#logout_form').submit();
     })
 
-
+// category status
     $(document).on('click', 'input.cat_check', function(){
         let checked = $(this).attr('checked');
         let status_id = $(this).attr('status_id');
@@ -27,6 +27,8 @@
         }
         
     }) 
+
+
 
     $('.delete-btn').click(function(){
         let conf = confirm('Are you sure?');
@@ -53,6 +55,32 @@
 
       
     })
+
+    // Tag status
+
+    $(document).on('click', 'input.tag_check', function(){
+        let checked = $(this).attr('checked');
+        let status_id = $(this).attr('status_id');
+
+        if(checked == 'checked'){
+           $.ajax({
+            url: 'tag/status-inactive/' + status_id,
+            success: function(data){
+                swal('Status inactivation successful');
+            }
+           });
+        }else{
+            $.ajax({
+                url: 'tag/status-active/' + status_id,
+                success: function(data){
+                    swal('Status activation successful');
+
+                }
+               });
+        }
+        
+    }) 
+
 
 
 })(jQuery)

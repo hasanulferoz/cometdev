@@ -62,3 +62,7 @@ Route::get('admin/dashboard', [App\Http\Controllers\AdminController::class, 'sho
 // Route::get('admin/tag/{id}', [App\Http\Controllers\TagController::class, 'destroy'])->name('tag.destroy');
 
 Route::resource('admin/tag', 'App\Http\Controllers\TagController');
+
+// Tag Status
+Route::get('admin/tag/status-inactive/{id}', [App\Http\Controllers\TagController::class, 'statusUpdateInActive']);
+Route::get('admin/tag/status-active/{id}', [App\Http\Controllers\TagController::class, 'statusUpdateActive']);
