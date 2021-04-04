@@ -19,7 +19,7 @@
 							<div class="col-sm-12">
 								<h3 class="page-title">Welcome {{Auth::user()->name}}!</h3>
 								<ul class="breadcrumb">
-									<li class="breadcrumb-item active">Post</li>
+									<li class="breadcrumb-item active">Dashboard</li>
 								</ul>
 							</div>
 						</div>
@@ -33,7 +33,7 @@
 							<br>
 							<div class="card">
 								<div class="card-header">
-									<h4 class="card-title">All Posts</h4>
+									<h4 class="card-title">Striped Rows</h4>
 								</div>
 								<div class="card-body">
 									<div class="table-responsive">
