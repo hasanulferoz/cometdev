@@ -69,7 +69,11 @@ class TagController extends Controller
      */
     public function edit($id)
     {
-        //
+        $edit_data = Tag::find($id);
+        return [
+            'id' => $edit_data->id,
+            'name' => $edit_data->name
+        ];
     }
 
     /**
@@ -81,7 +85,20 @@ class TagController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+         //return $request->all();
+
+        $edit_data = $request->edit_id;
+
+        $edit_data = Tag::find($edit_data);
+
+
+        $edit_data->name = $request->name;
+
+
+        $edit_data->slug = Str::slug($request-> name);
+        $edit_data->update() ;
+        return redirect()->back()->with('success', 'Tag updated successful');
     }
 
     /**

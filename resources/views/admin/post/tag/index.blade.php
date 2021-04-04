@@ -76,7 +76,7 @@
 														</td>
 														<td>
 															{{-- <a class="btn btn-sm btn-info" href=""><i class="fa fa-eye aria-hidden="true"></i></a> --}}
-															<a  edit_id="{{$data->id}}" class="btn btn-sm btn-warning edit_cat" href=""><i class="fa fa-pencil-square-o aria-hidden="true"></i></a>
+															<a  edit_id="{{$data->id}}" class="btn btn-sm btn-warning edit_tag" href=""><i class="fa fa-pencil-square-o aria-hidden="true"></i></a>
 															{{-- <a class="btn btn-sm btn-danger" href=""><div class="fa fa-trash" aria-hidden="true"></div></a> --}}
 
 															<form action="{{route('tag.destroy', $data-> id)}}" class="d-inline" method="POST">
@@ -127,13 +127,13 @@
 		{{-- Edit Modal --}}
 
 		
-		<div id="edit_category_modal" class="modal fade">
+		<div id="edit_tag_modal" class="modal fade">
 			<div class="modal-dialog modal-dialog-centerd">
 				<div class="modal-content">
 					<div class="modal-body">
-						<h2>Edit Category</h2>
+						<h2>Edit Tag</h2>
 						<hr>
-						<form action="{{route('category.update',2)}}" method="POST">
+						<form action="{{route('tag.update',2)}}" method="POST">
 							@csrf
 							@method('PUT')
 							<div class="form-group">
