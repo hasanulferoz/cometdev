@@ -20,7 +20,8 @@
         <link rel="stylesheet" href="{{asset('admin/assets/css/feathericon.min.css')}}">
 		
 		<link rel="stylesheet" href="{{asset('admin/assets/plugins/morris/morris.css')}}">
-		
+		<!-- select 2 -->
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 		<!-- Main CSS -->
         <link rel="stylesheet" href="{{asset('admin/assets/css/style.css')}}">
 
@@ -39,7 +40,7 @@
 		
 		
 		<!-- jQuery -->
-        <script src="assets/js/jquery-3.2.1.min.js"></script>
+        <script src="{{asset('admin/assets/js/jquery-3.2.1.min.js')}}"></script>
 		
 		<!-- Bootstrap Core JS -->
         <script src="{{asset('admin/assets/js/popper.min.js')}}"></script>
@@ -51,7 +52,10 @@
 		<script src="{{asset('admin/assets/plugins/raphael/raphael.min.js')}}"></script>    
 		<script src="{{asset('admin/assets/plugins/morris/morris.min.js')}}"></script>  
 		<script src="{{asset('admin/assets/js/chart.morris.js')}}"></script>
-		
+		<!-- CK EDITOR -->
+		<script src="//cdn.ckeditor.com/4.16.0/full/ckeditor.js"></script>
+			<!-- select 2 JS -->
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 		<!-- Custom JS -->
 		<script  src="{{asset('admin/assets/js/script.js')}}"></script>
 		<script  src="{{asset('admin/assets/js/comet/custom.js')}}"></script>

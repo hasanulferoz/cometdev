@@ -4141,3 +4141,13 @@ table.table-inbox tbody tr.checked {
 		display: none;
 	}
 }
+
+.post-image,.post-gallery,.post-video, .post-audio{
+	display: none;
+}
+.post-gallery-img img{
+	width: 200px;
+	height: 200px;
+	border: 1px solid #fff;
+	margin: 10px;
+}

@@ -37,7 +37,8 @@ Route::get('admin/dashboard', [App\Http\Controllers\AdminController::class, 'sho
  //Route::resource('post', 'App\Http\Controllers\PostController');
  //Route::resource('post', PostController::class);
  Route::resource('category', 'App\Http\Controllers\CategoryController');
- Route::get('admin/post', [App\Http\Controllers\PostController::class, 'index'])->name('post.index');
+ Route::resource('post', 'App\Http\Controllers\PostController');
+
 
 
 //  post category
@@ -61,7 +62,7 @@ Route::get('admin/dashboard', [App\Http\Controllers\AdminController::class, 'sho
 // Route::post('admin/tag', [App\Http\Controllers\TagController::class, 'store'])->name('tag.store');
 // Route::get('admin/tag/{id}', [App\Http\Controllers\TagController::class, 'destroy'])->name('tag.destroy');
 
-Route::resource('admin/tag', 'App\Http\Controllers\TagController');
+Route::resource('tag', 'App\Http\Controllers\TagController');
 
 // Tag Status
 Route::get('admin/tag/status-inactive/{id}', [App\Http\Controllers\TagController::class, 'statusUpdateInActive']);
